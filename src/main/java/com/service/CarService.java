@@ -1,9 +1,17 @@
 package com.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class CarService {
 	private String name;
 	private String date;
+
+	@Autowired // equivalent to byType injection
+	@Qualifier("car1")
 	private Car car;
+
+	@Autowired
 	private Employee employee;
 
 	public String getName() {

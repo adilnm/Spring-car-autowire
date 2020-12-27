@@ -12,6 +12,7 @@ public class ServiceMain {
 		CarService srv = (CarService) context.getBean("srv1");
 
 		System.out.println(srv.getEmployee());
+		System.out.println(srv.getCar());
 
 	}
 

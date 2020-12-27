@@ -3,26 +3,28 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="car" class="com.service.Car">
+	<context:annotation-config />
+
+	<bean id="car1" class="com.service.Car">
 		<property name="make" value="Toyota" />
 		<property name="model" value="Prius" />
 		<property name="year" value="2020" />
 	</bean>
 
-	<bean id="employee" class="com.service.Employee">
+	<bean id="employee1" class="com.service.Employee">
 		<property name="name" value="Adil" />
 		<property name="age" value="30" />
 	</bean>
 
-	<bean id="srv1" class="com.service.CarService" autowire="byType">
+	<bean id="srv1" class="com.service.CarService">
 		<property name="name" value="Oil change" />
 		<property name="date" value="12/12/2020" />
 	</bean>
-
-
-
 </beans>
    
