@@ -17,7 +17,7 @@
 		<property name="age" value="30" />
 	</bean>
 
-	<bean id="srv1" class="com.service.CarService" autowire="byName">
+	<bean id="srv1" class="com.service.CarService" autowire="byType">
 		<property name="name" value="Oil change" />
 		<property name="date" value="12/12/2020" />
 	</bean>
